@@ -1,0 +1,43 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Faculty Dashboard</h2>
+
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow p-4">
+        <div class="form-group">
+          <label for="pin" class="form-label">Search by PIN:</label>
+          <input type="text" id="pin" [(ngModel)]="pin" placeholder="Enter PIN"
+            class="form-control mb-3" />
+        </div>
+        <button (click)="searchStudent()" class="btn btn-primary w-100">
+          Search
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center mt-4" *ngIf="studentData">
+    <div class="col-md-8">
+      <div class="card shadow p-4">
+        <h3>Student Details</h3>
+        <ul class="list-group">
+          <li class="list-group-item"><strong>PIN:</strong> {{ studentData.pin }}</li>
+          <li class="list-group-item"><strong>Name:</strong> {{ studentData.name }}</li>
+        </ul>
+
+        <!-- Present Days Bar -->
+        <div class="chart-label">Present Days: {{ presentDays }}</div>
+        <div class="chart-container">
+          <div class="bar present" [ngStyle]="{ 'width': presentPercentage + '%' }"></div>
+        </div>
+
+        <!-- Absent Days Bar -->
+        <div class="chart-label">Absent Days: {{ absentDays }}</div>
+        <div class="chart-container">
+          <div class="bar absent" [ngStyle]="{ 'width': absentPercentage + '%' }"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

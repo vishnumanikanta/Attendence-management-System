@@ -1,0 +1,41 @@
+.container {
+    max-width: 900px;
+  }
+  .card {
+    border-radius: 1rem;
+  }
+  h2, h3 {
+    font-weight: 600;
+  }
+  button {
+    margin-top: 10px;
+  }
+  
+  .chart-label {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .chart-container {
+    width: 100%;
+    max-width: 500px;
+    height: 30px;
+    background: #f1f1f1;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  
+  .bar {
+    height: 100%;
+    transition: width 0.5s ease-in-out;
+  }
+  
+  .present {
+    background: #28a745; 
+  }
+  
+  .absent {
+    background: #dc3545;
+  }
+  
